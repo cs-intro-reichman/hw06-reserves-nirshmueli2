@@ -11,18 +11,18 @@ public class Runigram {
 		//// Hide / change / add to the testing code below, as needed.
 
 		// Tests the reading and printing of an image:
-		Color[][] cake = read("cake.ppm");
-		// print(cake);
+		Color[][] tinypic = read("tinypic.ppm");
+		// print(tinypic);
 
-		Color[][] ironman = read("ironman.ppm");
+		// Color[][] ironman = read("ironman.ppm");
 
 		// Creates an image which will be the result of various
 		// image processing operations:
-		Color[][] Horizontalimage;
-		Color[][] VerticalImage;
-		Color[][] grayScaledImage;
-		Color[][] ScaledImage;
-		Color[][] blendImage;
+		// Color[][] Horizontalimage;
+		// Color[][] VerticalImage;
+		// Color[][] grayScaledImage;
+		// Color[][] ScaledImage;
+		// Color[][] blendImage;
 
 		// // Tests the horizontal flipping of an image:
 		// Horizontalimage = flippedHorizontally(tinypic);
@@ -43,9 +43,9 @@ public class Runigram {
 		// System.out.println();
 		// print1(BlendColor);
 
-		blendImage = blend(cake, ironman, 0.5);
-		System.out.println();
-		print(blendImage);
+		// blendImage = blend(cake, ironman, 0.5);
+		// System.out.println();
+		// print(blendImage);
 
 	}
 
