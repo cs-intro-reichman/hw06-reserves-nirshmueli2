@@ -42,7 +42,7 @@ public class Runigram {
 		Color n2 = new Color(200, 20, 40);
 		Color BlendColor = blend(n1, n2, 0.25);
 		System.out.println();
-		print1(BlendColor);
+		print(BlendColor);
 
 		blendImage = blend(tinypic, ironman, 0.5);
 		System.out.println();
@@ -76,7 +76,7 @@ public class Runigram {
 	}
 
 	// Prints the RGB values of a given color.
-	private static void print1(Color c) {
+	private static void print(Color c) {
 		System.out.print("(");
 		System.out.printf("%3s,", c.getRed()); // Prints the red component
 		System.out.printf("%3s,", c.getGreen()); // Prints the green component
@@ -94,7 +94,7 @@ public class Runigram {
 		//// Replace this comment with your code
 		for (int i = 0; i < image.length; i++) {
 			for (int j = 0; j < image[0].length; j++) {
-				print1(image[i][j]);
+				print(image[i][j]);
 			}
 			System.out.println();
 		}
