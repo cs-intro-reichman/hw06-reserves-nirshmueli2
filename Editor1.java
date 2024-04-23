@@ -10,7 +10,7 @@ import java.awt.Color;
  * java Editor1 thor.ppm gs
  */
 public class Editor1 {
-
+ 
 	public static void main (String[] args){
 		String fileName = args[0];
 		String action = args[1];
