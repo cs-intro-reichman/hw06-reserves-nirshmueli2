@@ -12,40 +12,41 @@ public class Runigram {
 
 		// Tests the reading and printing of an image:
 		Color[][] tinypic = read("tinypic.ppm");
-		// print(tinypic);
+		print(tinypic);
 
-		// Color[][] ironman = read("ironman.ppm");
+		Color[][] ironman = read("ironman.ppm");
 
 		// Creates an image which will be the result of various
 		// image processing operations:
-		// Color[][] Horizontalimage;
-		// Color[][] VerticalImage;
-		// Color[][] grayScaledImage;
-		// Color[][] ScaledImage;
-		// Color[][] blendImage;
 
-		// // Tests the horizontal flipping of an image:
-		// Horizontalimage = flippedHorizontally(tinypic);
-		// System.out.println();
-		// print(Horizontalimage);
+		Color[][] Horizontalimage;
+		Color[][] VerticalImage;
+		Color[][] grayScaledImage;
+		Color[][] ScaledImage;
+		Color[][] blendImage;
 
-		// VerticalImage = flippedVertically(tinypic);
-		// System.out.println();
-		// print(VerticalImage);
+		// Tests the horizontal flipping of an image:
+		Horizontalimage = flippedHorizontally(tinypic);
+		System.out.println();
+		print(Horizontalimage);
 
-		// grayScaledImage = grayScaled(tinypic);
-		// System.out.println();
-		// print(grayScaledImage);
+		VerticalImage = flippedVertically(tinypic);
+		System.out.println();
+		print(VerticalImage);
 
-		// Color n1 = new Color(100, 40, 100);
-		// Color n2 = new Color(200, 20, 40);
-		// Color BlendColor = blend(n1, n2, 0.25);
-		// System.out.println();
-		// print1(BlendColor);
+		grayScaledImage = grayScaled(tinypic);
+		System.out.println();
+		print(grayScaledImage);
 
-		// blendImage = blend(cake, ironman, 0.5);
-		// System.out.println();
-		// print(blendImage);
+		Color n1 = new Color(100, 40, 100);
+		Color n2 = new Color(200, 20, 40);
+		Color BlendColor = blend(n1, n2, 0.25);
+		System.out.println();
+		print1(BlendColor);
+
+		blendImage = blend(tinypic, ironman, 0.5);
+		System.out.println();
+		print(blendImage);
 
 	}
 
