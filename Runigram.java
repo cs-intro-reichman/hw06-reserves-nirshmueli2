@@ -216,8 +216,15 @@ public class Runigram {
 		Color[][] scaledTarget;
 		// if (source.length != target.length || source[0].length != target[0].length) {
 		scaledTarget = scaled(target, source.length, source[0].length);
-		for (int i = 0; i < n; i++) {
-			Color[][] curImage = blend(source, scaledTarget, (n - i) / n);
+		// System.out.println("displaying source");
+		// display(source);
+		// StdDraw.pause(1000);
+		// System.out.println("displaying target");
+		// display(target);
+		for (int i = 0; i <= n; i++) {
+			double w = (double) (n - i) / n;
+			Color[][] curImage = blend(source, scaledTarget, w);
+			System.out.println("n:" + n + " i:" + i + " w:" + w);
 			StdDraw.pause(500);
 			display(curImage);
 		}
