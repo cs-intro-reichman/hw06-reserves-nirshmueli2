@@ -10,43 +10,43 @@ public class Runigram {
 
 		//// Hide / change / add to the testing code below, as needed.
 
-		// Tests the reading and printing of an image:
-		Color[][] tinypic = read("tinypic.ppm");
-		print(tinypic);
+		// // Tests the reading and printing of an image:
+		// Color[][] tinypic = read("tinypic.ppm");
+		// print(tinypic);
 
-		Color[][] ironman = read("ironman.ppm");
+		// Color[][] ironman = read("ironman.ppm");
 
-		// Creates an image which will be the result of various
-		// image processing operations:
+		// // Creates an image which will be the result of various
+		// // image processing operations:
 
-		Color[][] Horizontalimage;
-		Color[][] VerticalImage;
-		Color[][] grayScaledImage;
-		Color[][] ScaledImage;
-		Color[][] blendImage;
+		// Color[][] Horizontalimage;
+		// Color[][] VerticalImage;
+		// Color[][] grayScaledImage;
+		// Color[][] ScaledImage;
+		// Color[][] blendImage;
 
-		// Tests the horizontal flipping of an image:
-		Horizontalimage = flippedHorizontally(tinypic);
-		System.out.println();
-		print(Horizontalimage);
+		// // Tests the horizontal flipping of an image:
+		// Horizontalimage = flippedHorizontally(tinypic);
+		// System.out.println();
+		// print(Horizontalimage);
 
-		VerticalImage = flippedVertically(tinypic);
-		System.out.println();
-		print(VerticalImage);
+		// VerticalImage = flippedVertically(tinypic);
+		// System.out.println();
+		// print(VerticalImage);
 
-		grayScaledImage = grayScaled(tinypic);
-		System.out.println();
-		print(grayScaledImage);
+		// grayScaledImage = grayScaled(tinypic);
+		// System.out.println();
+		// print(grayScaledImage);
 
-		Color n1 = new Color(100, 40, 100);
-		Color n2 = new Color(200, 20, 40);
-		Color BlendColor = blend(n1, n2, 0.25);
-		System.out.println();
-		print(BlendColor);
+		// Color n1 = new Color(100, 40, 100);
+		// Color n2 = new Color(200, 20, 40);
+		// Color BlendColor = blend(n1, n2, 0.25);
+		// System.out.println();
+		// print(BlendColor);
 
-		blendImage = blend(tinypic, ironman, 0.5);
-		System.out.println();
-		print(blendImage);
+		// blendImage = blend(tinypic, ironman, 0.5);
+		// System.out.println();
+		// print(blendImage);
 
 	}
 
@@ -161,8 +161,8 @@ public class Runigram {
 		Color[][] scaledImage = new Color[height][width];
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {
-				int newi = i * H0 / height;
-				int newj = j * W0 / width;
+				int newi = (int) (i * H0 / height);
+				int newj = (int) (j * W0 / width);
 				scaledImage[i][j] = image[newi][newj];
 			}
 		}
@@ -224,7 +224,7 @@ public class Runigram {
 		for (int i = 0; i <= n; i++) {
 			double w = (double) (n - i) / n;
 			Color[][] curImage = blend(source, scaledTarget, w);
-			System.out.println("n:" + n + " i:" + i + " w:" + w);
+			// System.out.println("n:" + n + " i:" + i + " w:" + w);
 			StdDraw.pause(500);
 			display(curImage);
 		}
